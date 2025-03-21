@@ -14,11 +14,11 @@
             </div>
             <div class="links">
                 <div class="mainLink">
-                    <a href="index.htm">DASHBOARD</a>
+                    <a href="dashboard.html">DASHBOARD</a>
                 </div>
 
                 <div class="mainLink">
-                    <a href="about_me.htm">ABOUT US</a>
+                    <a href="about_me.html">ABOUT US</a>
                 </div>
             </div>
         </div>
