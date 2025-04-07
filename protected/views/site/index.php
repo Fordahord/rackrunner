@@ -34,7 +34,7 @@ $this->pageTitle = Yii::app()->name;
             <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?php echo Yii::app()->createUrl('/site/login'); ?>">Login</a></li>
                 </ul>
             </div>
         </div>
@@ -208,19 +208,10 @@ $this->pageTitle = Yii::app()->name;
                     <div class="col-md-4 col-sm-6">
                         <div class="pricing-content">
                             <ul class="nav flex-column text-center" >
-                                <li class="nav-item mb-2"><a href="login.html" class="nav-link p-0 text-muted">Login</a></li>
+                                <li class="nav-item mb-2"><a href="<?php echo Yii::app()->createUrl('/site/login'); ?>" class="nav-link p-0 text-muted">Login</a></li>
                             </ul>
                         </div>
                     </div>
-                </div>
-
-
-
-                <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"></div>
-
-                <div class="Cookies">
-                    <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2025 - Rack Runner</div></div>
-                    <a href="#" id="open_preferences_center">Privacy Policy</a>
                 </div>
             </footer>
         </section>
