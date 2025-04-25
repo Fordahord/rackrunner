@@ -61,45 +61,6 @@
         </div>
 
 
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 col-sm-6">
-                        <div class="pricing-content">
-                            <img src="images/rack_runner_logo.png" alt="Logo" style="width: 200px;">
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="pricing-content"> 
-                            <form action="subscribe.php" method="post">
-                                <h5>Subscribe to our newsletter</h5>
-                                <p>Monthly digest of what's new and exciting from us.</p>
-                                <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                                    <label for="newsletter1" class="visually-hidden">Email address</label>
-                                    <input id="newsletter1" type="email" class="form-control" required name="email" placeholder="Email address">
-                                    <button type="submit" class="btn btn-info btn-xl2" name="subscribe">Subscribe</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="pricing-content">
-                            <ul class="list-unstyled nav flex-column text-center">
-                                <li><a href="dashboard.php">Dashboard</a></li>
-                                <li><a href="project.php">Project</a></li>
-                                <li><a href="meet_the_team.php">Meet The Team</a></li>
-                                <li><a href="contact.php">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-
-
-
         <!-- Scripts -->
         <!-- ApexCharts -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
