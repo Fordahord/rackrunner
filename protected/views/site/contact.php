@@ -1,11 +1,3 @@
-<!-- Scripts -->
-<!-- ApexCharts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
-<!-- Custom JS -->
-<script src="js/scripts2.js"></script>
-<!-- Bootstrap JS and dependencies (Popper.js & Bootstrap bundle) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -30,6 +22,9 @@
 
     </head>
     <body>
+        <br><br><br><br><br>
+
+
         <!--Contact Form-->
         <header class="masthead2">
             <section class="page-section" id="contact">
@@ -117,7 +112,7 @@
                                     </div>
                                     <!-- Contact Information Section -->
                                     <div class="col-md-5 d-flex align-items-stretch">
-                                        <div class="info-wrap bg-primary w-100 p-lg-5 p-4">
+                                        <div class="info-wrap bg-primary w-100 p-lg-5 p-4" style="height: min-content; border-radius: 8px;">
                                             <h3 class="mb-4 mt-md-4 text-white">Contact us</h3>
                                             <!-- Address Information -->
                                             <div class="dbox w-100 d-flex align-items-start">
@@ -173,8 +168,30 @@
                             </form>
                         </div>
                     </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="pricing-content">
+                            <ul class="list-unstyled nav flex-column text-center">
+                                <li><a href="dashboard.php">Dashboard</a></li>
+                                <li><a href="project.php">Project</a></li>
+                                <li><a href="meet_the_team.php">Meet The Team</a></li>
+                                <li><a href="contact.php">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>
+
+
+
+
+
+        <!-- Scripts -->
+        <!-- ApexCharts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+        <!-- Custom JS -->
+        <script src="js/scripts2.js"></script>
+        <!-- Bootstrap JS and dependencies (Popper.js & Bootstrap bundle) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>

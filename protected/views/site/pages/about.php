@@ -1,11 +1,3 @@
-<!-- Scripts -->
-<!-- ApexCharts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
-<!-- Custom JS -->
-<script src="js/scripts2.js"></script>
-<!-- Bootstrap JS and dependencies (Popper.js & Bootstrap bundle) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -134,8 +126,30 @@
                             </form>
                         </div>
                     </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="pricing-content">
+                            <ul class="list-unstyled nav flex-column text-center">
+                                <li><a href="dashboard.php">Dashboard</a></li>
+                                <li><a href="project.php">Project</a></li>
+                                <li><a href="meet_the_team.php">Meet The Team</a></li>
+                                <li><a href="contact.php">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </footer>      
+        </footer>
+
+
+
+        <!-- Scripts -->
+        <!-- ApexCharts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+        <!-- Custom JS -->
+        <script src="js/scripts2.js"></script>
+        <!-- Bootstrap JS and dependencies (Popper.js & Bootstrap bundle) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
     </body>
 </html>

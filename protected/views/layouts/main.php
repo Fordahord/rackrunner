@@ -23,6 +23,10 @@
         <div>
 
             <div id="mainmenu" style="display: flex; align-items: center;">
+                <div class="logo">
+                    <img src="/images/rack_runner_logo.png" class="logo" alt="Logo" style="max-height: 60px;">
+                </div>
+
                 <?php
                 $this->widget('zii.widgets.CMenu', array(
                     'items' => array(
