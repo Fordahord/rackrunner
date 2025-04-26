@@ -34,6 +34,7 @@
                         array('label' => 'About', 'url' => array('/site/page', 'view' => 'about'), 'visible' => Yii::app()->user->isGuest),
                         array('label' => 'Contact', 'url' => array('/site/contact'), 'visible' => Yii::app()->user->isGuest),
                         array('label' => 'Dashboard', 'url' => array('/client/dashboard'), 'visible' => !Yii::app()->user->isGuest),
+                        array('label' => 'Products', 'url' => array('/product/catalogue'), 'visible' => !Yii::app()->user->isGuest),
                     ),
                 ));
 
