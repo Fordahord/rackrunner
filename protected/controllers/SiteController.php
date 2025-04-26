@@ -28,6 +28,13 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        if (!Yii::app()->user->isGuest) {
+            if (Yii::app()->user->name == 'admin') {
+                $this->redirect(array('/client/dashboard'));
+                return;
+            }
+        }
+
         // renders the view file 'protected/views/site/index.php'
         // using the default layout 'protected/views/layouts/main.php'
         $this->render('index');
