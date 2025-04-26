@@ -18,7 +18,11 @@ class ClientController extends Controller
             $this->redirect(array('/site/login'));
         }
 
-        $this->render('dashboard');
+        $product_count = Product::model()->count();
+
+        $this->render('dashboard', array(
+            'product_count' => $product_count,
+        ));
     }
 
 }

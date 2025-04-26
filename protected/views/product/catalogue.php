@@ -7,5 +7,3 @@
  */
 
 echo "hey";
-$products = Product::model()->findAll();
-print_r($products);

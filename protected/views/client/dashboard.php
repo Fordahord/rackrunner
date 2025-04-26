@@ -29,7 +29,11 @@
                 <div class="card text-center">
                     <p class="fw-bold">PRODUCTS</p>
                     <span class="material-icons-outlined">inventory_2</span>
-                    <h4>249</h4>
+                    <h4>
+                        <?php
+                        echo $product_count;
+                        ?>
+                    </h4>
                 </div>
                 <div class="card text-center">
                     <p class="fw-bold">PURCHASE ORDERS</p>
