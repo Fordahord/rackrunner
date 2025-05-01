@@ -35,7 +35,7 @@ class ProductController extends Controller
             $image             = CUploadedFile::getInstance($model, 'image_path');
 
             if ($image) {
-                $filename      = 'product_' . time() . '.' . strtolower($image->getExtensionName());
+                $filename      = uniqid() . '.' . strtolower($image->getExtensionName());
                 $relative_path = 'products/images/' . $filename;
                 $absolute_path = '/var/www/rackrunner.co.uk/' . $relative_path;
 
