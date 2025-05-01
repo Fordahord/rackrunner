@@ -25,7 +25,9 @@ class Product extends CActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('name', 'required'),
+            array('name, quantity', 'required'),
+            array('description, image_path', 'safe'), // text field
+            array('quantity', 'numerical', 'integerOnly' => true),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
             array('product_id', 'safe', 'on' => 'search'),

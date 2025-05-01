@@ -229,3 +229,20 @@ div.search-form
 {
     background: #80CFFF;
 }
+
+input[type="text"] {
+    border: 1px solid #ccc;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 4px;
+    transition: background .25s ease-in-out;
+    -moz-transition: background .25s ease-in-out;
+    -webkit-transition: background .25s ease-in-out;
+}
+
+input[type="text"]:focus {
+    border: 1px solid #aaa;
+    background: #f8f8f8;
+    -webkit-box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, .2);
+    box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, .2);
+}

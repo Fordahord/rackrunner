@@ -16,6 +16,9 @@
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css">
 
         <title><?php echo CHtml::encode($this->pageTitle); ?></title>
+
+        <link rel="shortcut icon" type="image/png" href="<?php echo Yii::app()->request->baseUrl; ?>/favicon.ico">
+        <link rel="apple-touch-icon" href="<?php echo Yii::app()->request->baseUrl; ?>/favicon.ico">
     </head>
 
     <body>

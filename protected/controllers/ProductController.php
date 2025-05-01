@@ -18,7 +18,39 @@ class ProductController extends Controller
             $this->redirect(array('/site/login'));
         }
 
-        $this->render('catalogue');
+        $products = Product::model()->findAll();
+
+        $this->render('catalogue', array(
+            'products' => $products,
+        ));
+    }
+
+    public function actionCreate()
+    {
+        $model = new Product;
+
+        if (isset($_POST['Product'])) {
+            // Create product
+            $model->attributes = $_POST['Product'];
+            $image             = CUploadedFile::getInstance($model, 'image_path');
+
+            if ($image) {
+                $filename      = 'product_' . time() . '.' . strtolower($image->getExtensionName());
+                $relative_path = 'products/images/' . $filename;
+                $absolute_path = '/var/www/rackrunner.co.uk/' . $relative_path;
+
+                if ($image->saveAs($absolute_path)) {
+                    $model->image_path = $relative_path;
+                }
+            }
+
+            $model->save(false);
+            $this->redirect(array('catalogue'));
+        }
+
+        $this->render('create', array(
+            'model' => $model,
+        ));
     }
 
 }
