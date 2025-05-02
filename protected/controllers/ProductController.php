@@ -53,4 +53,25 @@ class ProductController extends Controller
         ));
     }
 
+    /**
+     * Delete pointed product
+     *
+     * @param type $id
+     */
+    public function actionDelete($id)
+    {
+        $model = Product::model()->findByPk($id);
+
+        if (!empty($model->image_path)) {
+            $absolute_path = '/var/www/rackrunner.co.uk/' . $model->image_path;
+            if (file_exists($absolute_path)) {
+                unlink($absolute_path);
+            }
+        }
+
+        $model->delete();
+
+        $this->redirect(array('catalogue'));
+    }
+
 }

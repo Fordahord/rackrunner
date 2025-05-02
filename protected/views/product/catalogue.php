@@ -1,5 +1,7 @@
 <!--Bootstrap CSS-->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<!-- Font Awesome CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-...your-integrity..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 <Style>
@@ -23,6 +25,9 @@
             <img class="card-img-top rounded mx-auto" style="max-height: 183px; max-width: 183px;" src="/<?= !empty($product->image_path) ? $product->image_path : 'images/no_image.png'; ?>">
             <div class="card-body">
                 <p class="card-text" style="text-align: center;"><?php echo CHtml::encode($product->name); ?></p>
+                <?php
+                echo CHtml::link('<i class="fa fa-trash"></i>', array('product/delete', 'id' => $product->product_id), array('class' => 'btn btn-sm btn-danger'));
+                ?>
             </div>
         </div>
     <?php } ?>
