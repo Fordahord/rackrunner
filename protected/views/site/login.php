@@ -2,7 +2,7 @@
     <div style="background: white; border: 1px solid #ccc; padding: 30px 40px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); max-width: 400px; width: 100%;">
         <h1>Login</h1>
 
-        <p>Please fill out the following form with your login credentials:</p>
+        <p style="font-size: 12px;">Please fill out the following form with your login credentials:</p>
 
         <div class="form">
             <?php
@@ -28,8 +28,10 @@
             </div>
 
             <div class="row rememberMe">
-                <?php echo $form->checkBox($model, 'rememberMe'); ?>
-                <?php echo $form->label($model, 'rememberMe'); ?>
+                <label>
+                    <?php echo $form->checkBox($model, 'rememberMe'); ?>
+                    <?php echo $model->getAttributeLabel('rememberMe'); ?>
+                </label>
                 <?php echo $form->error($model, 'rememberMe'); ?>
             </div>
 

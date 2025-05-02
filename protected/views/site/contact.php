@@ -7,8 +7,6 @@
         <meta name="author" content="RackRunner" />
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="/images/rack_runner_logo.png" />
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
