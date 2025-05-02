@@ -45,8 +45,8 @@
 
                 $this->widget('zii.widgets.CMenu', array(
                     'items'       => array(
-                        array('label' => 'Login', 'url' => array('/site/login'), 'visible' => Yii::app()->user->isGuest),
-                        array('label' => 'Logout (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
+                        array('label' => 'Login', 'url' => array('/site/login'), 'visible' => Yii::app()->user->isGuest, 'itemOptions' => array('style' => 'padding-right: 16px;')),
+                        array('label' => 'Logout (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest, 'itemOptions' => array('style' => 'padding-right: 16px;'))
                     ),
                     'htmlOptions' => array(
                         'style' => 'margin: 0 0 0 auto; padding: 0;'),
