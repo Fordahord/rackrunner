@@ -28,6 +28,7 @@ class Product extends CActiveRecord
             array('name, quantity', 'required'),
             array('description, image_path', 'safe'), // text field
             array('quantity', 'numerical', 'integerOnly' => true),
+            array('name', 'length', 'max' => 60),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
             array('product_id', 'safe', 'on' => 'search'),

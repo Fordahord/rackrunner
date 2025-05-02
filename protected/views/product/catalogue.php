@@ -24,12 +24,20 @@
         <div class="card" style="width: 18rem; margin: 6px; padding: 10px;">
             <img class="card-img-top rounded mx-auto" style="max-height: 183px; max-width: 183px;" src="/<?= !empty($product->image_path) ? $product->image_path : 'images/no_image.png'; ?>">
             <div class="card-body">
-                <p class="card-text" style="text-align: center;"><?php echo CHtml::encode($product->name); ?></p>
-                <?php
-                echo CHtml::link('<i class="fa fa-trash"></i>', array('product/delete', 'id' => $product->product_id), array('class' => 'btn btn-sm btn-danger', 'style' => 'margin: 1px;'));
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><?php echo CHtml::encode($product->name); ?></li>
+                    <li class="list-group-item"><?php echo CHtml::encode("Description " . $product->description); ?></li>
+                    <li class="list-group-item"><?php echo CHtml::encode("Quantity " . $product->quantity); ?></li>  
+                    </li>
+                    <?php
+                    echo CHtml::link('<i class="fa fa-trash"></i>', array('product/delete', 'id' => $product->product_id), array(
+                        'class'   => 'btn btn-sm btn-danger',
+                        'style'   => 'margin: 1px;',
+                        'onclick' => "return confirm('Are you sure you want to delete this?');",
+                    ));
 
-                echo CHtml::link('<i class="fa fa-pen"></i>', array('product/update', 'id' => $product->product_id), array('class' => 'btn btn-secondary btn-sm', 'style' => 'margin: 1px;'));
-                ?>
+                    echo CHtml::link('<i class="fa fa-pen"></i>', array('product/update', 'id' => $product->product_id), array('class' => 'btn btn-secondary btn-sm', 'style' => 'margin: 1px;'));
+                    ?>
             </div>
         </div>
     <?php } ?>
