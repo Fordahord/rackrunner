@@ -20,8 +20,24 @@ class ClientController extends Controller
 
         $product_count = Product::model()->count();
 
+        $top_products = Product::model()->findAll(array(
+            'order' => 'quantity DESC',
+            'limit' => 5,
+        ));
+
+        $top_product_labels = array_map(function ($name) {
+            return $name->name;
+        }, $top_products);
+
+        $top_products_values = array_map(function ($name) {
+            return $name->quantity;
+        }, $top_products);
+
         $this->render('dashboard', array(
-            'product_count' => $product_count,
+            'product_count'      => $product_count,
+            'top_products'       => $top_products,
+            'top_product_labels' => $top_product_labels,
+            'top_product_values' => $top_products_values,
         ));
     }
 

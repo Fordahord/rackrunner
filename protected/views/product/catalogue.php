@@ -22,7 +22,9 @@
 <div class="row" style="padding: 25px;">
     <?php foreach ($products as $product) { ?>
         <div class="card" style="width: 18rem; margin: 6px; padding: 10px;">
-            <img class="card-img-top rounded mx-auto" style="max-height: 183px; max-width: 183px;" src="/<?= !empty($product->image_path) ? $product->image_path : 'images/no_image.png'; ?>">
+            <div class="d-flex align-items-start" style="height: 183px;">
+                <img class="card-img-top rounded mx-auto" style="max-height: 183px; max-width: 183px;" src="/<?= !empty($product->image_path) ? $product->image_path : 'images/no_image.png'; ?>">
+            </div>
             <div class="card-body">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"><?php echo CHtml::encode($product->name); ?></li>

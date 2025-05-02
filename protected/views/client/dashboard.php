@@ -1,3 +1,8 @@
+<script>
+    top_product_labels = <?= json_encode($top_product_labels) ?>;
+    top_product_values = <?= json_encode($top_product_values) ?>;
+</script>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -33,31 +38,12 @@
                         ?>
                     </h4>
                 </div>
-                <div class="card text-center">
-                    <p class="fw-bold">PURCHASE ORDERS</p>
-                    <span class="material-icons-outlined">add_shopping_cart</span>
-                    <h4>83</h4>
-                </div>
-                <div class="card text-center">
-                    <p class="fw-bold">SALES ORDERS</p>
-                    <span class="material-icons-outlined">shopping_cart</span>
-                    <h4>79</h4>
-                </div>
-                <div class="card text-center">
-                    <p class="fw-bold">INVENTORY ALERTS</p>
-                    <span class="material-icons-outlined">notification_important</span>
-                    <h4>56</h4>
-                </div>
             </div>
 
             <div class="charts">
                 <div class="charts-card">
                     <h5 class="text-center">Top 5 Products</h5>
                     <div id="bar-chart" style="height:200px; background:#f4f4f4;"></div>
-                </div>
-                <div class="charts-card">
-                    <h5 class="text-center">Purchase and Sales Orders</h5>
-                    <div id="area-chart" style="height:200px; background:#f4f4f4;"></div>
                 </div>
             </div>
         </div>
