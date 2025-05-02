@@ -26,7 +26,9 @@
             <div class="card-body">
                 <p class="card-text" style="text-align: center;"><?php echo CHtml::encode($product->name); ?></p>
                 <?php
-                echo CHtml::link('<i class="fa fa-trash"></i>', array('product/delete', 'id' => $product->product_id), array('class' => 'btn btn-sm btn-danger'));
+                echo CHtml::link('<i class="fa fa-trash"></i>', array('product/delete', 'id' => $product->product_id), array('class' => 'btn btn-sm btn-danger', 'style' => 'margin: 1px;'));
+
+                echo CHtml::link('<i class="fa fa-pen"></i>', array('product/update', 'id' => $product->product_id), array('class' => 'btn btn-secondary btn-sm', 'style' => 'margin: 1px;'));
                 ?>
             </div>
         </div>

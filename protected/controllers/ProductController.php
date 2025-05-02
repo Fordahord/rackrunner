@@ -44,7 +44,7 @@ class ProductController extends Controller
                 }
             }
 
-            $model->save(false);
+            $model->save();
             $this->redirect(array('catalogue'));
         }
 
@@ -72,6 +72,45 @@ class ProductController extends Controller
         $model->delete();
 
         $this->redirect(array('catalogue'));
+    }
+
+    public function actionUpdate($id)
+    {
+        $model = Product::model()->findByPk($id);
+
+        $old_image_path = $model->image_path;
+
+        if (isset($_POST['Product'])) {
+            $model->attributes = $_POST['Product'];
+
+            $image = CUploadedFile::getInstance($model, 'image_path');
+
+            if ($image) {
+                $filename      = uniqid() . '.' . strtolower($image->getExtensionName());
+                $relative_path = 'products/images/' . $filename;
+                $absolute_path = '/var/www/rackrunner.co.uk/' . $relative_path;
+
+                if ($image->saveAs($absolute_path)) {
+                    if (!empty($old_image_path)) {
+                        $old_absolute_path = '/var/www/rackrunner.co.uk/' . $old_image_path;
+                        if (file_exists($old_absolute_path)) {
+                            unlink($old_absolute_path);
+                        }
+                    }
+
+                    $model->image_path = $relative_path;
+                } else {
+                    $model->image_path = $old_image_path;
+                }
+            } else {
+                $model->image_path = $old_image_path;
+            }
+
+            $model->save();
+            $this->redirect(array('catalogue'));
+        }
+
+        $this->render('create', array('model' => $model));
     }
 
 }
