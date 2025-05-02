@@ -26,7 +26,7 @@
             <div class="card-body">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"><?php echo CHtml::encode($product->name); ?></li>
-                    <li class="list-group-item"><?php echo CHtml::encode("Description " . $product->description); ?></li>
+                    <li class="list-group-item"><?php echo CHtml::encode($product->description); ?></li>
                     <li class="list-group-item"><?php echo CHtml::encode("Quantity " . $product->quantity); ?></li>  
                     </li>
                     <?php
