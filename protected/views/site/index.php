@@ -172,7 +172,7 @@
                         <!-- Newsletter subscription form -->
                         <div class="col-md-4 col-sm-6">
                             <div class="pricing-content">
-                                <form action="subscribe.php" method="post">
+                                <form method="post">
                                     <h5>Subscribe to our newsletter</h5>
                                     <p>Monthly digest of what's new and exciting from us.</p>
                                     <div class="d-flex flex-column flex-sm-row w-100 gap-2">
@@ -187,7 +187,7 @@
                         <div class="col-md-4 col-sm-6">
                             <div class="pricing-content">
                                 <ul class="nav flex-column text-center" >
-                                    <li class="nav-item mb-2"><a href="login.html" class="nav-link p-0 text-muted">Login</a></li>
+                                    <li class="nav-item mb-2"><a href="<?php echo Yii::app()->createUrl('site/login'); ?>" class="nav-link p-0 text-muted">Login</a></li>
                                 </ul>
                             </div>
                         </div>

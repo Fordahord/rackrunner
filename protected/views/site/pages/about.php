@@ -110,7 +110,7 @@
                     </div>
                     <div class="col-md-4 col-sm-6">
                         <div class="pricing-content"> 
-                            <form action="subscribe.php" method="post">
+                            <form method="post">
                                 <h5>Subscribe to our newsletter</h5>
                                 <p>Monthly digest of what's new and exciting from us.</p>
                                 <div class="d-flex flex-column flex-sm-row w-100 gap-2">
@@ -123,12 +123,18 @@
                     </div>
                     <div class="col-md-4 col-sm-6">
                         <div class="pricing-content">
-                            <ul class="list-unstyled nav flex-column text-center">
-                                <li><a href="dashboard.php">Dashboard</a></li>
-                                <li><a href="project.php">Project</a></li>
-                                <li><a href="meet_the_team.php">Meet The Team</a></li>
-                                <li><a href="contact.php">Contact</a></li>
-                            </ul>
+                            <?php
+                            $this->widget('zii.widgets.CMenu', array(
+                                'items'       => array(
+                                    array('label' => 'Home', 'url' => array('/site/index'), 'visible' => Yii::app()->user->isGuest),
+                                    array('label' => 'Project', 'url' => array('/client/dashboard'), 'visible' => Yii::app()->user->isGuest),
+                                    array('label' => 'About', 'url' => array('/site/page', 'view' => 'about'), 'visible' => Yii::app()->user->isGuest),
+                                    array('label' => 'Contact', 'url' => array('/site/contact'), 'visible' => Yii::app()->user->isGuest),
+                                ),
+                                'htmlOptions' => array(
+                                    'class' => 'list-unstyled nav flex-column text-center'),
+                            ));
+                            ?>
                         </div>
                     </div>
                 </div>
